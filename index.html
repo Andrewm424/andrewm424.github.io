@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Mukavela - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+<header>
+    <h1>Andrew Mukavela</h1>
+    <p>Passionate about Software Development & Data Analysis</p>
+</header>
+
+<nav>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('projects')">Projects</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+</nav>
+
+<main>
+    <section id="about">
+        <div class="profile-photo">
+            <img src=profile.jpg alt="Profile Photo">
+        </div>
+        <div class="intro">
+            <h2>About Me</h2>
+            <p>I am a final year student passionate about software development and data analysis. Throughout my academic journey, I have honed my skills in Java, Python, and SQL, mastering both the art of creating efficient and scalable software solutions and the science of extracting meaningful insights from complex datasets.</p>
+            <p>As a software developer, I thrive on turning ideas into functional, user-friendly applications. My experience includes developing applications for user management, data visualization, and process automation.</p>
+            <p>In parallel, my interest in data analysis drives me to uncover patterns, trends, and correlations that inform decision-making. I am proficient in data cleaning, exploratory data analysis, statistical modeling, and machine learning techniques, using tools like Pandas, NumPy, Matplotlib, and scikit-learn.</p>
+            <p>Looking ahead, I am eager to apply my skills and knowledge in software development and data analysis to real-world projects, contributing to innovative solutions and impactful insights for businesses and organizations.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects" style="display: none;">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Calculator App</h3>
+            <p>A simple yet functional calculator app that supports basic arithmetic operations.</p>
+            <img src="calculator.png" alt="Calculator App Screenshot">
+        </div>
+        <!-- Add more project cards as needed -->
+    </section>
+
+    <section id="contact" class="contact" style="display: none;">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me via email or LinkedIn:</p>
+        <p>
+            <a href="mailto:amukavela@gmail.com">amukavela@gmail.com</a><br>
+            <a href="https://www.linkedin.com/in/andrew-mukavela-191904169" target="_blank">LinkedIn Profile</a>
+        </p>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Andrew Mukavela. All rights reserved.</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Show the selected section
+        const selectedSection = document.getElementById(sectionId);
+        selectedSection.style.display = 'block';
+    }
+</script>
+</body>
+</html>
